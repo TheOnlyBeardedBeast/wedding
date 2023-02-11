@@ -7,7 +7,7 @@ export const Menu = () => {
       <hr />
       <span>Hovädzie consomé s pečeňovými haluškami a zeleninou</span>
       <hr />
-      <span>Gordon blue a medailónky z panenky, ryža a opekané zemiaky</span>
+      <span>Cordon bleu a medailónky z panenky, ryža a opekané zemiaky</span>
       <hr />
       <span>
         Mascarpone krém podávaný s čerstvým drobným ovocím a cookies mrveničkou
