@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/heart.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucia & Márk</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://luciamark.love" />
+    <meta property="og:title" content="Lucia & Márk" />
+    <meta property="og:description" content="It is happening." />
+    <meta property="og:image" content="/preview.png" />
+  </head>
+  <body>
+    <div id="root">
+      <button class="hamburger"><span></span><span></span><span></span></button>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#domov">Domov</a></li>
+          <li><a href="#info">Informácie</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#fotky">Fotky</a></li>
+        </ul>
+      </nav>
+      <section id="domov" class="threedee">
+        <div
+          class="canvas"
+          style="
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            pointer-events: auto;
+          "
+        >
+          <div style="width: 100%; height: 100%">
+            <canvas
+              data-engine="three.js r148"
+              width="3584"
+              height="1178"
+              style="display: block; width: 1792px; height: 589px"
+            ></canvas>
+          </div>
+        </div>
+        <div
+          style="
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-size: 42px;
+          "
+        >
+          <h1 style="margin-bottom: 16px; margin-top: 100px">
+            Lucia &amp; Márk
+          </h1>
+          <h2 style="margin-top: 0px">22.04.2023</h2>
+          <p style="display: flex; flex: 1 1 0%; align-items: end">
+            Reformovaný kostol <br />v Lučenci o 14:00
+          </p>
+        </div>
+      </section>
+      <section id="info" class="section">
+        <h1>Informácie</h1>
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/place/Kostol+Reformovanej+kres%C5%A5anskej+cirkvi/@48.3288048,19.66949,15z/data=!4m2!3m1!1s0x0:0xa294993e6a71932a?sa=X&amp;ved=2ahUKEwj2-oud4ov9AhUbiv0HHe-zAUAQ_BJ6BAhvEAg"
+          style="display: flex; flex-direction: column; text-decoration: none"
+          ><span>Kalvínský kostel (Kostol Reformovanej kresťanskej cirkvi)</span
+          ><span>J. Kármána 64, 984 01 Lučenec</span></a
+        >
+        <hr />
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/place/Re%C5%A1taur%C3%A1cia+Biela+Labu%C5%A5/@48.3266423,19.6538985,15z/data=!4m2!3m1!1s0x0:0x4fb0c12594b5338e?sa=X&amp;ved=2ahUKEwjVzqDd44v9AhXmXvEDHSefALcQ_BJ6BAh4EAg"
+          style="display: flex; flex-direction: column; text-decoration: none"
+          ><span>Reštaurácia Biela Labuť</span
+          ><span>Mestský park, 1707, 984 01 Lučenec</span></a
+        >
+      </section>
+      <section id="menu" class="section">
+        <h1>Menu</h1>
+        <h2>Reštaurácia Biela Labuť</h2>
+        <span>Bruschetta s paradajkami, cesnakom a olivovým olejom</span>
+        <hr />
+        <span>Hovädzie consomé s pečeňovými haluškami a zeleninou</span>
+        <hr />
+        <span>Gordon blue a medailónky z panenky, ryža a opekané zemiaky</span>
+        <hr />
+        <span
+          >Mascarpone krém podávaný s čerstvým drobným ovocím a cookies
+          mrveničkou</span
+        >
+      </section>
+      <section id="fotky" class="section">
+        <h1>Fotky</h1>
+        <h2>Fotky budú dostupné po svadbe</h2>
+      </section>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
