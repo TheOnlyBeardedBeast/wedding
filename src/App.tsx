@@ -35,7 +35,7 @@ function App() {
       )}
       <div className="main">
         <h1>Lucia & Márk</h1>
-        <h2 style={{ marginTop: 0 }}>{isHu ? "2023.04.22" : "22.04.2023"}</h2>
+        <h2>{isHu ? "2023.04.22" : "22.04.2023"}</h2>
         <p>
           {isHu ? (
             <>
