@@ -1,16 +1,34 @@
+import { useLang } from "./LangHandler";
+
 export const Menu = () => {
+  const { isHu } = useLang();
+
   return (
     <section id="menu" className="section">
-      <h1>Menu</h1>
-      <h2>Reštaurácia Biela Labuť</h2>
-      <span>Bruschetta s paradajkami, cesnakom a olivovým olejom</span>
-      <hr />
-      <span>Hovädzie consomé s pečeňovými haluškami a zeleninou</span>
-      <hr />
-      <span>Cordon bleu a medailónky z panenky, ryža a opekané zemiaky</span>
+      <h1>{isHu ? "Menü" : "Menu"}</h1>
+      <h2>{isHu ? "Fehér Hattyú étterem" : "Reštaurácia Biela Labuť"}</h2>
+      <span>
+        {isHu
+          ? "Bruschetta paradicsommal, fokhagymával és olívaolajjal"
+          : "Bruschetta s paradajkami, cesnakom a olivovým olejom"}
+      </span>
       <hr />
       <span>
-        Mascarpone krém podávaný s čerstvým drobným ovocím a cookies mrveničkou
+        {isHu
+          ? "Marha konsommé májgaluskával és zöldségekkel"
+          : "Hovädzie consommé s pečeňovými haluškami a zeleninou"}
+      </span>
+      <hr />
+      <span>
+        {isHu
+          ? "Cordon bleu és sertés szűzpecsenye medalionok, rizs és sült burgonya"
+          : "Cordon bleu a medailónky z panenky, ryža a opekané zemiaky"}
+      </span>
+      <hr />
+      <span>
+        {isHu
+          ? "Mascarpone krém friss apró gyümölccsel és süteménymorzsával tálalva"
+          : "Mascarpone krém podávaný s čerstvým drobným ovocím a cookies mrveničkou"}
       </span>
     </section>
   );

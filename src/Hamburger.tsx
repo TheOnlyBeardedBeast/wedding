@@ -1,6 +1,8 @@
 import { useCallback, useState } from "react";
+import { useLang } from "./LangHandler";
 
 export const Hamburger = () => {
+  const { isHu } = useLang();
   const [open, setOpen] = useState(false);
 
   const toggle = useCallback(() => {
@@ -20,23 +22,32 @@ export const Hamburger = () => {
       <nav className={open ? "navigation open" : "navigation"}>
         <ul>
           <li>
-            <a onClick={toggle} href="#domov">
-              Domov
+            <a onClick={toggle} href="#home">
+              {isHu ? "Főoldal" : "Domov"}
             </a>
           </li>
           <li>
             <a onClick={toggle} href="#info">
-              Informácie
+              {isHu ? "Információk" : "Informácie"}
             </a>
           </li>
           <li>
             <a onClick={toggle} href="#menu">
-              Menu
+              {isHu ? "Menü" : "Menu"}
             </a>
           </li>
           <li>
-            <a onClick={toggle} href="#fotky">
-              Fotky
+            <a onClick={toggle} href="#photos">
+              {isHu ? "Fotók" : "Fotky"}
+            </a>
+          </li>
+          <li>
+            <a
+              href={
+                isHu ? "https://luciamark.love" : "https://hu.luciamark.love"
+              }
+            >
+              {isHu ? "Szlovák verzió" : "Maďarská verzia"}
             </a>
           </li>
         </ul>

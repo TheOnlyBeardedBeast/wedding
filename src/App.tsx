@@ -1,4 +1,5 @@
 import { Suspense, useLayoutEffect, useMemo, useState, lazy } from "react";
+import { useLang } from "./LangHandler";
 
 const options = {
   rootMargin: "-150px",
@@ -9,6 +10,7 @@ const ThreeDee = lazy(() =>
 );
 
 function App() {
+  const { isHu } = useLang();
   const [visible, setVisible] = useState(true);
 
   const observer = useMemo(() => {
@@ -25,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <section id="domov" className="threedee">
+    <section id="home" className="threedee">
       {visible && (
         <Suspense>
           <ThreeDee />
@@ -33,9 +35,20 @@ function App() {
       )}
       <div className="main">
         <h1>Lucia & Márk</h1>
-        <h2 style={{ marginTop: 0 }}>22.04.2023</h2>
+        <h2 style={{ marginTop: 0 }}>{isHu ? "2023.04.22" : "22.04.2023"}</h2>
         <p>
-          Reformovaný kostol <br />v Lučenci o 14:00
+          {isHu ? (
+            <>
+              Református templom
+              <br />
+              Losonc 14:00
+            </>
+          ) : (
+            <>
+              Reformovaný kostol
+              <br />v Lučenci o 14:00
+            </>
+          )}
         </p>
       </div>
     </section>
